@@ -13,7 +13,7 @@ body {
 
 header {
 	background-color: #f7f7f7;
-	padding: 20px 0;
+	padding-top: 1rem;
 	text-align: center;
 	grid-area: header;
 }
@@ -31,6 +31,12 @@ nav ul {
 nav li {
 	display: inline-block;
 	margin-right: 20px;
+	transition: 0.7s;
+}
+
+nav li:hover {
+	scale: 1.1;
+	transition: 0.5s;
 }
 
 nav a {
@@ -39,8 +45,18 @@ nav a {
 }
 
 main {
+	max-width: 1200px;
+	margin: 0 auto;
 	padding: 20px;
 	grid-area: main;
+}
+
+.banner {
+	max-width: 100%;
+}
+
+.banner img {
+	width: 100%;
 }
 
 section {
@@ -54,14 +70,36 @@ section a {
 	margin-bottom: 20px;
 }
 
+.food {
+	display: flex;
+	flex-direction: row;
+}
+
+.dish {
+	padding: 10px;
+	text-align: center;
+}
+
 article {
 	flex: 0 1 calc(33.33% - 20px);
 	margin-bottom: 20px;
+	overflow: hidden;
+	border-radius: 10px;
+	background-color: #eee;
+	cursor: pointer;
 }
 
 article img {
 	width: 100%;
 	height: auto;
+}
+
+article p {
+	text-align: center;
+}
+
+article:hover {
+	box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
 }
 
 footer {
@@ -74,8 +112,12 @@ footer {
 	grid-area: footer;
 }
 
-footer div {
-	flex: 0 1 calc(50% - 20px);
+footer .left {
+	flex: 0 0 20px;
+}
+
+footer .right {
+	flex: 1 1 auto;
 }
 
 footer img {
@@ -83,9 +125,8 @@ footer img {
 	margin: 0 auto;
 }
 
-.food {
-	display: flex;
-	flex-direction: row;
+footer p {
+	text-align: center;
 }
 
 @media screen and (max-width: 768px) {

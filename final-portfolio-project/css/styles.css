@@ -51,8 +51,15 @@ main {
 	grid-area: main;
 }
 
-.banner img {
-	width: 100%;
+.banner {
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+}
+
+.banner .carousel-inner {
+	width: 640px;
+	height: 480px;
 }
 
 section {
